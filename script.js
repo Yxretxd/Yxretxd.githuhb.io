@@ -1,6 +1,6 @@
 AOS.init({ once: true, duration: 700, easing: 'ease-out-cubic' });
 
-// Active nav link & scroll spy
+// Link del menu que aparece resaltado
 const sections = [...document.querySelectorAll('main section')];
 const navLinks = [...document.querySelectorAll('nav a')];
 
@@ -32,7 +32,7 @@ document.querySelectorAll('.gallery img').forEach(img => {
 lb.addEventListener('click', e => { if (e.target === lb || e.target === lbImg) lb.classList.remove('open'); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
 
-// Leaflet load + map init
+// Cargar Leaflet
 async function loadLeaflet() {
   const link = document.createElement('link');
   link.rel = 'stylesheet';
